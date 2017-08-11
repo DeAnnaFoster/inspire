@@ -13,7 +13,7 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
 //register your todos routes as api/routes
- server.use('/api/routes/todos', todosRouter) 
+ server.use('/api/todos', todosRouter) 
 
 
 //start your server listening....

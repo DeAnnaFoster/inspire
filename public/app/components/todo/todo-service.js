@@ -25,10 +25,24 @@ function TodoService() {
 
 	this.toggleTodoStatus = function (todoId, getTodos) {
 		// MAKE SURE WE THINK THIS ONE THROUGH
-		var todo = {}
+		//var todo = {}
 		//STEP 1: Find the todo by its id **HINT** todoList
 
 		//STEP 2: Change the completed flag to the opposite of what is is **HINT** todo.completed = !todo.completed
+
+		var index = -1;//todoList.findIndex(todoId);
+		for(var i = 0; i < todoList.length;i++){
+			if(todoList[i]._id == todoId){
+				
+				index = i;
+				break;
+			}
+		}
+		console.log(index);
+
+		
+
+
 
 		//STEP 3: Here is that weird Ajax request because $.put doesn't exist
 		$.ajax({
@@ -49,7 +63,7 @@ function TodoService() {
 		$.ajax({
 			contentType: 'application/json',
 			method: 'DELETE',
-			url: '/api/todos' + todoId
+			url: '/api/todos/' + todoId
 		})
 			.then(getTodos)
 			.fail(logError)

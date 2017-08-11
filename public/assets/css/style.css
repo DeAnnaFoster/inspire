@@ -5,9 +5,13 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
+    width: 100%;
 }
 
 div{
     color: white;
+}
+#todoList{
+     background-color: black; 
+     display: inline-block;
 }

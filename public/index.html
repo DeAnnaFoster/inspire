@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inspire</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="body2" background="">
+<body id="body" background="">
 	<div class="container-fluid">
 		<div class="text-center">
 		</div>
@@ -23,20 +24,15 @@
 
 		<br>
 		<div id="todo">
-
-			
-			<div id="status">`${} to do`</div>
+			<div id="status">count goes here</div>
 
 			<div id="todoList">
-				<input id="checkBox" type="checkbox">todo goes here
-				<button type="button" onclick="app.controllers.todoController.deleteTodo('${todo.id}')">X</button>
+			<!-- todo List goes here -->
 			</div>
 
 			<form onsubmit="app.controllers.todoController.addTodoFromForm(event) ">
-				<input type="text" name="todo" placeholder="New Todo">
+				<input type="text" name="title" placeholder="New Todo">
 			</form>
-		
-			
 		</div>
 
 
@@ -47,7 +43,7 @@
 
 
 	<!--JS Libraries-->
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<!--Services-->
 	<script src="app/components/weather/weather-service.js"></script>
 	<script src="app/components/image/image-service.js"></script>

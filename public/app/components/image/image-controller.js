@@ -10,9 +10,9 @@ function ImageController() {
 
 	function drawImage(image) {
 		
-		console.log(image);
+		//console.log(image);
 		var template = `url('${image.url}')`;
-		document.getElementById("body2").style.backgroundImage = template;
+		document.getElementById("body").style.backgroundImage = template;
 	}
 
 

@@ -13,14 +13,14 @@ function TodoService() {
 				todoList = todos // <-- WHY IS THIS IMPORTANT????
 				draw(todoList) // <-- WHERE DOES THIS DRAW FUNCTION COME FROM???
 			})
-			.catch(logError)
+			.fail(logError)
 	}
 
 	this.addTodo = function (todo, getTodos) {
 		// WHAT IS THIS FOR???
 		$.post('/api/todos', todo)
 			.then(getTodos) // <-- DO NOT CHANGE THIS IT WORKS BUT DO YOU KNOW WHY?
-			.catch(logError)
+			.fail(logError)
 	}
 
 	this.toggleTodoStatus = function (todoId, getTodos) {

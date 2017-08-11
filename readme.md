@@ -1,14 +1,14 @@
 ## Inspire
 
-Inspiration can be difficult to achieve. Keep track of your many important tasks and the weather with the suttle help of a random daily quote and beatiful scenery.   
+Inspiration can be difficult to achieve. Keep track of your many important tasks and the weather with the subtle help of a random daily quote and beautiful scenery.   
 
 ### The Setup
 
 
 ##### Front-End
-This time around you are being thrown into a mix of several files and some basic structure. Take some time to look at the files. Remember services are used for getting and mainting the data integrity. Controllers are for manipulating the DOM.
+This time around you are being thrown into a mix of several files and some basic structure. Take some time to look at the files. Remember services are used for getting and maintaining the data integrity. Controllers are for manipulating the DOM.
 
-You will notice that the basic controllers and html structure has been setup for you. You will be responsible to connect each of the controllers to their appropiate service. Every Service is a constructor so be sure to invoke the service inside the controller and save it to a variable in the controller to gain access to the needed methods. Take a look at the weather controller for an example of newing up the services. Also don't forget to instantiate your controllers and add them to the app object.
+You will notice that the basic controllers and html structure has been setup for you. You will be responsible to connect each of the controllers to their appropriate service. Every Service is a constructor so be sure to invoke the service inside the controller and save it to a variable in the controller to gain access to the needed methods. Take a look at the weather controller for an example of newing up the services. Also don't forget to instantiate your controllers and add them to the app object.
 
 Your goal will be to put all of the data gathered from the services together in a visually pleasing format as well as ensuring the functionality of a todo list. 
 
@@ -38,7 +38,7 @@ Requirements:
 
 ### Part 2 - Adding the functionality `Total Points: 15`
 
-The todolist is perhaps on of the most important features of this application. You will need to provide the user a way to add items to a list to be monitored for tracking. The user should be able to add or remove items easily and for a small bonus the user should be able to indicate an items status if they don't want to remove the item.
+The todolist is perhaps one of the most important features of this application. You will need to provide the user a way to add items to a list to be monitored for tracking. The user should be able to add or remove items easily and for a small bonus the user should be able to indicate an items status if they don't want to remove the item.
 
 Requirements: 
 - `2 points`: The todolist allows items to be added to a list
@@ -64,7 +64,7 @@ Requirements:
 ### Challenge (Just for Fun **NO EXTRA POINTS**)
 - Include an Icon to show what the weather is sunny/cloudy/rainy
 - Add a button to cycle to next quote/picture
-- Could you encorporate a deadline for some of the tasks
+- Could you incorporate a deadline for some of the tasks
 - Add a settings so user can change to a new "theme" (font, background colors, etc.)
 - Clicking the weather should let the user toggle between Celsius, Fahrenheit, or even Kelvin display
 

@@ -2,19 +2,18 @@ function QuoteController() {
 	var qs = new QuoteService();
 
 	qs.getQuote(function (quote) {
-		console.log('What is the quote', quote);
+		//console.log('What is the quote', quote);
 		drawQuote(quote);
 	})
 
 	function drawQuote(quote) {
-		var quoteElem = document.getElementById("quote");
 		var template = '';
 
 		template += `
 				<div onmouseover="app.controllers.quoteController.showAuthor()" onmouseout="app.controllers.quoteController.hideAuthor()" >${quote.quote}</div>
 				<div id="author" style="display:none;">Author: ${quote.author}</div>
 			`
-		quoteElem.innerHTML = template;
+		document.getElementById("quote").innerHTML = template;
 	}
 
 	this.showAuthor = function(){

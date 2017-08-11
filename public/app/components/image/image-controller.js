@@ -3,25 +3,16 @@ function ImageController() {
 
 	var imageService = new ImageService();
 
-	function getImage() {
-		imageService.getImage(draw);
+	imageService.getImage(function (image) {
+		drawImage(image);
+	})
 
-	}
 
-
-	function draw(imageArr) {
-		var imageElem = document.getElementById("book-list")
-		var template = '<ul>'
-// 		for (var i = 0; i < bookArr.length; i++) {
-// 			var book = bookArr[i];
-// 			template += `
-// <li>${book.title}: ${book.currentPage}</li> <button type="button" onclick="app.controllers.bookmarkController.deleteBook('${book._id}')">Delorted</button>
-// <button type="button" onclick="app.controllers.bookmarkController.editBook('${book._id}')">READ</button>
-// `
-// 		}
-
-		template += '</ul>'
-		imageElem.innerHTML = template
+	function drawImage(image) {
+		
+		console.log(image);
+		var template = `url('${image.url}')`;
+		document.getElementById("body2").style.backgroundImage = template;
 	}
 
 

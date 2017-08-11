@@ -14,7 +14,7 @@ function TodoController() {
 		todoService.getTodos(draw);
 	}
 
-	function draw(todos) {
+	function draw(todoList) {
 		//WHAT IS MY PURPOSE?
 		//BUILD YOUR TODO TEMPLATE HERE
 		var template = '';

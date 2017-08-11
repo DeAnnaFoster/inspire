@@ -6,25 +6,41 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="body">
-	<div class="text-center">
-		<!-- <img class="img-responsive" src="https://bcw.blob.core.windows.net/public/img/inspire.jpg" /> -->
+<body id="body2" background="">
+	<div class="container-fluid">
+		<div class="text-center">
+		</div>
+
+		<br>
+		<div id="weather">
+			<!-- Weather goes here -->
+		</div>
+
+		<br>
+		<div id="quote">
+			<!-- Quote goes here -->
+		</div>
+
+		<br>
+		<div id="todo">
+
+			
+			<div id="status">`${} to do`</div>
+
+			<div id="todoList">
+				<input id="checkBox" type="checkbox">todo goes here
+				<button type="button" onclick="app.controllers.todoController.deleteTodo('${todo.id}')">X</button>
+			</div>
+
+			<form onsubmit="app.controllers.todoController.addTodoFromForm(event) ">
+				<input type="text" name="todo" placeholder="New Todo">
+			</form>
+		
+			
+		</div>
+
+
 	</div>
-
-	<div id="weather">
-		Your Weather Template
-	</div>
-
-	<div id="quote">
-		<!-- Quote goes here -->
-	</div>
-
-	<div id="todo">
-		<form onsubmit=""></form>
-		A Todo List
-	</div>
-
-
 
 
 

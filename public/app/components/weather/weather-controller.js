@@ -5,7 +5,6 @@ function WeatherController() {
 	weatherService.getWeather(function (weather) {
 		//What can you do with this weather object?
 		//er...weather the storm...depending 'weather' or not you want to.
-
 		drawWeather(weather);
 	})
 
@@ -15,6 +14,7 @@ function WeatherController() {
 		var imgIcon = 'http://openweathermap.org/img/w/' + iconCode + '.png';
 
 		var temp = (weather.main.temp).toFixed(1);//going to be in Fahrenheit default
+		
 		if (scale == 'C') {
 			temp = ((temp - 32) / 1.8).toFixed(1);
 		}
@@ -31,10 +31,11 @@ function WeatherController() {
 	this.scaleToggle = function () {
 		if (scale == 'F') {
 			scale = 'C';
+		}else{
+			scale = 'F';
 		}
 
 		weatherService.getWeather(function (weather) {
-
 			drawWeather(weather);
 		});
 	}

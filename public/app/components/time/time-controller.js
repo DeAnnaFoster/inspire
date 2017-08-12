@@ -4,11 +4,12 @@ function TimeController() {
     var dayMessage = '';
     var timeBase = 0;
 
-    //set the interval in time to repeat then call the function. 
-    //Using 60 seconds here to pull time.
+    //set the interval in time to repeat then call the function.
+    //keep this low. Looks like it interferes with the switch 
+    //to time bases (military, etc) 
     var interval = setInterval(function () {
         drawTime();
-    }, 60000);
+    }, 2000);
 
     function getMessage(h, m) {
         var message = '';
@@ -35,13 +36,13 @@ function TimeController() {
         return 'Happy Day';
     }
 
-    this.changeTime = function(){
-        if(timeBase== 0){
-            timeBase=12;
-        }else{
-            timeBase=0;
+    this.changeTime = function () {
+        if (timeBase == 0) {
+            timeBase = 12;
+        } else {
+            timeBase = 0;
         }
-        console.log(timeBase);
+        console.log("Normal Time uses 12: Currently - " + timeBase);
     }
 
     function drawTime() {

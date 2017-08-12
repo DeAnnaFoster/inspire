@@ -25,31 +25,32 @@ function TodoService() {
 
 	this.toggleTodoStatus = function (todoId, getTodos) {
 		// MAKE SURE WE THINK THIS ONE THROUGH
-		//var todo = {}
 		//STEP 1: Find the todo by its id **HINT** todoList
-
 		//STEP 2: Change the completed flag to the opposite of what is is **HINT** todo.completed = !todo.completed
 
-		var index = -1;//todoList.findIndex(todoId);
+		var todo = -1;
+
 		for(var i = 0; i < todoList.length;i++){
-			if(todoList[i]._id == todoId){
-				
-				index = i;
+
+			if(todoList[i]._id == todoId){			
+				todo = todoList[i];
 				break;
 			}
 		}
-		console.log(index);
 
-		
-
-
+		if(todo != -1){
+			todo.completed = !todo.completed;
+		}else{
+			//could put some other error message here
+			console.log('Something failed during checkbox state process');
+		}
 
 		//STEP 3: Here is that weird Ajax request because $.put doesn't exist
 		$.ajax({
 			method: 'PUT',
 			contentType: 'application/json',
 			url: '/api/todos/' + todoId,
-			data: todo
+			data: JSON.stringify(todo)
 		})
 			.then((message) => {
 				//DO YOU WANT TO DO ANYTHING WITH THIS?

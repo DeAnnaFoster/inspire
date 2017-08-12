@@ -21,15 +21,19 @@ function TodoController() {
 		var count = 0;
 
 		for (var i = 0; i < todoList.length; i++) {
-			var state = 'checked';
+			var attr = '';
 
 			if (todoList[i].completed == false) {
 				count++;
-				state = '';
+				//remove property (do not add)
+			}else{
+				//add property
+				attr='checked';
+
 			}
-			
+			//id="${todoList[i]._id}"
 			template += `
-				<input id="checkBox" type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todoList[i]._id}')">
+				<input type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todoList[i]._id}')"  ${attr}>
 				<div>${todoList[i].title}</div>
 				<button type="button" onclick="app.controllers.todoController.removeTodo('${todoList[i]._id}')">x</button>
 			`

@@ -33,9 +33,9 @@ function TodoController() {
 			}
 			//id="${todoList[i]._id}"
 			template += `
-				<input type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todoList[i]._id}')"  ${attr}>
-				<div>${todoList[i].title}</div>
-				<button type="button" onclick="app.controllers.todoController.removeTodo('${todoList[i]._id}')">x</button>
+				<input class="myInline" type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todoList[i]._id}')"  ${attr}>
+				<div class="myInline">${todoList[i].title}</div>
+				<button class="myInline" type="button" onclick="app.controllers.todoController.removeTodo('${todoList[i]._id}')">x</button><br>
 			`
 		}
 
@@ -59,7 +59,8 @@ function TodoController() {
 		//DON'T FORGET TO REDRAW THE SCREEN WITH THE NEW TODO
 		//YOU SHOULDN'T NEED TO CHANGE THIS
 		todoService.addTodo(newTodo, getTodos)
-		//^^^^^^^ EXAMPLE OF HOW TO GET YOUR TOODOS AFTER AN EDIT
+		//^^^^^^^ EXAMPLE OF HOW TO GET YOUR TODOS AFTER AN EDIT
+		document.getElementById("theForm").reset();
 	}
 
 	this.toggleTodoStatus = function (todoId) {

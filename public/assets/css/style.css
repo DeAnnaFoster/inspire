@@ -1,3 +1,7 @@
+*{
+     /* outline: 1px solid black;     */
+}
+
 .body{
     background: no-repeat center center fixed;
     text-align: center;
@@ -6,12 +10,103 @@
     -o-background-size: cover;
     background-size: cover;
     width: 100%;
+    height: 100vh;
 }
 
 div{
-    color: white;
+    color: red;
 }
+
+
+
+
+
+.center-text{
+    margin: 0 auto;
+    height: 40vh;
+    text-align: middle;
+}
+
+.row1{
+    height: 30vh;
+    overflow: hidden;
+}
+.row2{
+    height: 40vh;
+    overflow: hidden;
+}
+.row3{
+    height: 30vh;
+    overflow: hidden;
+}
+.row4{
+    height: 10vh;
+    /* overflow: hidden; */
+}
+
+#image-info{
+    padding: 0 10px 0 10px;
+}
+
+#quote{
+    /* position: absolute; */
+    /* bottom: 0; */
+    width: 100%;
+    text-align: middle;
+    margin: 0 auto;
+}
+
 #todoList{
      background-color: black; 
-     display: inline-block;
+     /* display: inline-block; */
+     font-size: 10px;
+     display: inline;
+}
+
+#todo{
+    /* width: 100%; */
+    /* margin: 0 auto; */
+
+    background-color: black; 
+    /* display: inline-block; */
+    display: inline;
+    /* padding: 0 10px 0 10px; */
+}
+
+.full{
+    width: 100%;
+    /* margin: 0 auto; */
+}
+
+.myInline{
+    display: inline;
+}
+
+.dark{
+    background-color: black; 
+}
+
+.weather{
+    display: inline;
+}
+
+.temp{
+    display: inline;
+    font-size: 26px;
+    padding: 10px;
+}
+
+.area{
+    /* display: inline; */
+    font-size: 12px;
+    text-align: right;
+    padding: 0 25px 0 0;
+}
+
+.report{
+    text-align: middle;
+}
+
+.top{
+    text-align: right;
 }

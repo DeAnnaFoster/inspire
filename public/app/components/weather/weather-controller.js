@@ -15,7 +15,8 @@ function WeatherController(){
 		//icon url is:
 		//http://openweathermap.org/img/w/10d.png
 		template += `
-				<div>${weather.name} ${weather.main.temp} <img src='${imgIcon}'></div>
+			<div class="row top"><img src='${imgIcon}'> <div class="temp"> ${weather.main.temp}</div></div>
+			<div class="row area"><div class="area">${weather.name}</div></div>
 			`
 		document.getElementById("weather").innerHTML = template;
 	}

@@ -1,5 +1,5 @@
 *{
-     /* outline: 1px solid black;     */
+      /* outline: 1px solid black;      */
 }
 
 .body{
@@ -16,10 +16,6 @@
 div{
     color: red;
 }
-
-
-
-
 
 .center-text{
     margin: 0 auto;
@@ -41,7 +37,12 @@ div{
 }
 .row4{
     height: 10vh;
-    /* overflow: hidden; */
+}
+.row5{
+    height: 7vh;
+}
+.row6{
+    height: 16vh;
 }
 
 #image-info{
@@ -49,33 +50,24 @@ div{
 }
 
 #quote{
-    /* position: absolute; */
-    /* bottom: 0; */
     width: 100%;
-    text-align: middle;
+    text-align: center;
     margin: 0 auto;
 }
 
 #todoList{
      background-color: black; 
-     /* display: inline-block; */
      font-size: 10px;
      display: inline;
 }
 
 #todo{
-    /* width: 100%; */
-    /* margin: 0 auto; */
-
     background-color: black; 
-    /* display: inline-block; */
     display: inline;
-    /* padding: 0 10px 0 10px; */
 }
 
 .full{
     width: 100%;
-    /* margin: 0 auto; */
 }
 
 .myInline{
@@ -84,6 +76,7 @@ div{
 
 .dark{
     background-color: black; 
+    opacity: .8;
 }
 
 .weather{
@@ -97,16 +90,25 @@ div{
 }
 
 .area{
-    /* display: inline; */
     font-size: 12px;
     text-align: right;
     padding: 0 25px 0 0;
 }
 
 .report{
-    text-align: middle;
+    text-align: center;
 }
 
 .top{
     text-align: right;
+}
+
+#clock{
+    font-size: 80px;
+    text-align: center;
+}
+
+#message{
+    font-size: 40px;
+    text-align: center;
 }

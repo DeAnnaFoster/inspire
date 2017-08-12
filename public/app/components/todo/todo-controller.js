@@ -25,13 +25,12 @@ function TodoController() {
 
 			if (todoList[i].completed == false) {
 				count++;
-				//remove property (do not add)
+				//remove property (so, do this by not adding it)
 			}else{
-				//add property
+				//set property
 				attr='checked';
 
 			}
-			//id="${todoList[i]._id}"
 			template += `
 				<input class="myInline" type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todoList[i]._id}')"  ${attr}>
 				<div class="myInline">${todoList[i].title}</div>
@@ -46,11 +45,11 @@ function TodoController() {
 	this.addTodoFromForm = function (e) {
 		e.preventDefault() // <-- hey this time its a freebie don't forget this
 		// TAKE THE INFORMATION FORM THE FORM
-		var form = e.target;
+		//var form = e.target; we need this why?
 		var newTitle = e.target.title.value
 
 		var newTodo = {
-			// DONT FORGET TO BUILD YOUR TODO OBJECT
+			// DONT FORGET TO BUILD YOUR TODO OBJECT.TADA!
 			title: newTitle,
 			completed: false
 		}

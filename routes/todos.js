@@ -74,5 +74,3 @@ function defaultErrorHandler(err, req, res, next) {
 
 module.exports = router;
 
-//getTodos();
-

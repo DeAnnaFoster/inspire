@@ -10,28 +10,27 @@ function TodoService() {
 		// You probably don't need to change anything in this function.....
 		$.get('/api/todos')
 			.then((todos) => {
-				todoList = todos // <-- WHY IS THIS IMPORTANT????
-				draw(todoList) // <-- WHERE DOES THIS DRAW FUNCTION COME FROM???
+				todoList = todos // <-- WHY IS THIS IMPORTANT???? Save locally
+				draw(todoList) // <-- WHERE DOES THIS DRAW FUNCTION COME FROM??? passed in as cb
 			})
 			.fail(logError)
 	}
 
 	this.addTodo = function (todo, getTodos) {
-		// WHAT IS THIS FOR???
+		// WHAT IS THIS FOR??? looks like its to add a Todo
 		$.post('/api/todos', todo)
-			.then(getTodos) // <-- DO NOT CHANGE THIS IT WORKS BUT DO YOU KNOW WHY?
+			.then(getTodos) // <-- DO NOT CHANGE THIS IT WORKS BUT DO YOU KNOW WHY? I think so
 			.fail(logError)
 	}
 
 	this.toggleTodoStatus = function (todoId, getTodos) {
-		// MAKE SURE WE THINK THIS ONE THROUGH
+		// MAKE SURE WE THINK THIS ONE THROUGH. Crud, head already hurts.
 		//STEP 1: Find the todo by its id **HINT** todoList
 		//STEP 2: Change the completed flag to the opposite of what is is **HINT** todo.completed = !todo.completed
 
 		var todo = -1;
 
 		for(var i = 0; i < todoList.length;i++){
-
 			if(todoList[i]._id == todoId){			
 				todo = todoList[i];
 				break;
@@ -41,8 +40,8 @@ function TodoService() {
 		if(todo != -1){
 			todo.completed = !todo.completed;
 		}else{
-			//could put some other error message here
-			console.log('Something failed during checkbox state process');
+			//could put some other error message here. 
+			console.log('Something failed during checkbox toggle process');
 		}
 
 		//STEP 3: Here is that weird Ajax request because $.put doesn't exist
@@ -70,8 +69,5 @@ function TodoService() {
 			.fail(logError)
 	}
 
-
-
 	// I KNOW LOTS OF CODE RIGHT
-
 }

@@ -4,10 +4,9 @@ function ImageService() {
 	var apiUrl = url + encodeURIComponent(url2);
 
 	this.getImage = function (callWhenDone) {
-		// ^^^^^^^ How do you call this function?
+		// ^^^^^^^ How do you call this function? Carefully...from the controller.
 		return $.get(apiUrl, function (res) {
 			res = JSON.parse(res);
-			//console.log('Image Data:', res);
 			callWhenDone(res);
 		})
 	}

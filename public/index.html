@@ -9,31 +9,6 @@
 
 <body id="body" background="">
 	<div class="container-fluid">
-		<!-- <div class="text-center">
-		</div> -->
-
-		<!-- <br>
-		<div id="weather">
-			<!-- Weather goes here -->
-		<!-- </div> -->
-
-		<!-- <br>
-		<!-- <div id="quote">
-			<!-- Quote goes here -->
-		<!-- </div>  -->
-
-		<!-- <br> -->
-		<!-- <div id="todo">
-			<div id="status">count goes here</div>
-
-			<div id="todoList">
-				<!-- todo List goes here -->
-		<!-- </div>
-
-			<form onsubmit="app.controllers.todoController.addTodoFromForm(event) ">
-				<input type="text" name="title" placeholder="New Todo">
-			</form>
-		</div> -->
 
 
 		<div class="row row1">
@@ -58,9 +33,10 @@
 			<div class="col-xs-6">
 				<div class="center-text">
 					<!-- Clock and Messages goes here -->
-					<h1>
-						Clock and Messages goes here
-					</h1>
+
+					<p id="clock" onclick="app.controllers.timeController.changeTime()"></p>
+					<p id="message"></p>
+
 				</div>
 			</div>
 			<div class="col-xs-3"></div>
@@ -82,9 +58,9 @@
 			</div>
 			<div class="col-xs-6">
 				<!-- Quotes goes here -->
-				<div class="row row4"></div>
-				<div class="row row4"></div>
-				<div class="row row4 row5">
+				<div class="row row5"></div>
+				<div class="row row5"></div>
+				<div class="row row6">
 					<div id="quote">
 						<!-- Quote goes here -->
 					</div>
@@ -113,6 +89,7 @@
 		</div>
 	</div>
 
+
 	<!--JS Libraries-->
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<!--Services-->
@@ -120,12 +97,14 @@
 	<script src="app/components/image/image-service.js"></script>
 	<script src="app/components/quote/quote-service.js"></script>
 	<script src="app/components/todo/todo-service.js"></script>
+	<script src="app/components/time/time-service.js"></script>
 
 	<!--Controllers-->
 	<script src="app/components/weather/weather-controller.js"></script>
 	<script src="app/components/image/image-controller.js"></script>
 	<script src="app/components/quote/quote-controller.js"></script>
 	<script src="app/components/todo/todo-controller.js"></script>
+	<script src="app/components/time/time-controller.js"></script>
 
 	<!--Initialize App-->
 	<script src="app/init.js"></script>
